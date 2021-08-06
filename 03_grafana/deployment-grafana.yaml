@@ -37,6 +37,8 @@ spec:
       volumes:
         - name: grafana-storage
           emptyDir: {}
+           hostPath:
+-                    path: /var/run/docker.sock
         - name: grafana-datasources
           configMap:
               defaultMode: 420
